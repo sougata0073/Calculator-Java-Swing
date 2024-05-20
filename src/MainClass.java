@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+
 import logic.DRG_MODE;
 import parser.*;
 
@@ -109,7 +110,7 @@ class MainFrame extends JFrame {
                     else
                         inputScreen.setText(s.concat(")"));
                 } else if (e.getSource().equals(buttonFactorial)) {
-                        inputScreen.setText(s.concat("!"));
+                    inputScreen.setText(s.concat("!"));
                 } else if (e.getSource().equals(buttonPi)) {
                     if (s.equals("0"))
                         inputScreen.setText("π");
@@ -299,7 +300,8 @@ class MainFrame extends JFrame {
                     expr.setDRG(DRG_MODE.RAD);
                 }
                 outputScreen.setText(expr.solve());
-            }catch (Exception ignored){ }
+            } catch (Exception ignored) {
+            }
         });
 
         buttonsPanel = new JPanel(new GridLayout(7, 4, 5, 5));
